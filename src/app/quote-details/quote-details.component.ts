@@ -22,7 +22,17 @@ export class QuoteDetailsComponent implements OnInit {
         this.toVote.emit(voteValue);
     }
 
+    quoteHighestLikes() {
+        for (var index = 0; index < this.quotes.length; index++) {
+            for (var i = 0; i < this.quotes.length; i++) {
+                if (this.quotes[index].likes > this.quotes[i].likes) {
+                    this.quotes[index].highest = true;
+                    this.quotes[i].highest = false;
+                }
 
+            }
+        }
+    }
 
   constructor() { }
 
