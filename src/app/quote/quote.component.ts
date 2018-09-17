@@ -28,6 +28,15 @@ export class QuoteComponent implements OnInit {
         this.quotes.push(new Quote(number,quote,author,submittee,date,0,0,0,false));
     }
 
+    quoteDelete(deleteSpecificQuote:boolean,index) {
+        if(deleteSpecificQuote){
+            let toDelete=confirm(`Are you sure you want to delete this quote?`);
+            if (toDelete) {
+                this.quotes.splice(index,1);
+            }
+        }
+    }
+
     
     }
 
