@@ -3,7 +3,9 @@
 <hr>
 <div class="container">
     <div class="row">
-        
+        <div class="quotes-form col-md-6">
+                <app-quote-form [addQuote]='addQuoteFunc'></app-quote-form>
+        </div>
 
         <div class="col-md-6">
             <div class="row" *ngFor="let quote of quotes; let i = 'index';" >
