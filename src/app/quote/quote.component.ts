@@ -37,7 +37,29 @@ export class QuoteComponent implements OnInit {
         }
     }
 
-    
+    quoteVote(vote:boolean,index) {
+        if(vote) {
+            this.quotes[index].likes += 1;
+            this.getHighest();
+        } else {
+            this.quotes[index].dislikes += 1;
+        }
+    }
+
+    getHighest(){
+        let highest = 0;
+        let highestQuote: Quote;
+        for(let quote of this.quotes){
+            if(quote.likes > highest){
+                highest = quote.likes;
+                highestQuote = quote;
+            }
+            if(quote.id === highestQuote.id){
+                quote.highest = true;
+            }else{
+                quote.highest = false;
+            }
+        }
     }
 
   constructor() {
