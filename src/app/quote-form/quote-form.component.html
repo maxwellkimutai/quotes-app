@@ -1,0 +1,19 @@
+
+    <form (ngSubmit)='addQuote(author.value,quote.value,submittee.value)' >
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" #author required>
+        </div>
+
+        <div class="form-group">
+            <label for="submittee-by">Submitted By</label>
+            <input type="text" class="form-control" name="submittee" #submittee required>
+        </div>
+
+        <div class="form-group">
+            <label for="quote">Quote</label>
+            <textarea cols="30" class="form-control" #quote required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
