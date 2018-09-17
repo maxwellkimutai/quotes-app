@@ -3,7 +3,10 @@
     <div>
         <p><span class="">Author: {{quote.author}} </span> <br> <span>Submitted by: {{quote.submittee}} </span> <br> <span>{{quote.duration|timer}}</span></p>
     </div>
-    
+    <div class="like-buttons">
+        <i class="like-icon far fa-thumbs-up" (click)='vote(true)' (click)='quoteHighestLikes()'>{{quote.likes}}</i>
+        <i class="dislike-icon far fa-thumbs-down" (click)='vote(false)' >{{quote.dislikes}}</i>
+    </div>
     <div>
         <button class="btn btn-danger" (click) = 'deleteQuote(true)'> Delete Quote </button>
     </div>
