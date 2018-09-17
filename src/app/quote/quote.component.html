@@ -4,5 +4,19 @@
 <div class="container">
     <div class="row">
         
+
+        <div class="col-md-6">
+            <div class="row" *ngFor="let quote of quotes; let i = 'index';" >
+                <div class="panel panel-default" [appHighlight] = 'quote.highest' >
+                    <div class="panel-heading">
+                        <h4>Quote</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p class="quote">"{{quote.quote}}"</p>
+                        <app-quote-details class="quote-details" [quote]="quote" [quotes]="quotes" (toDelete)='quoteDelete($event,i)' (toVote)='quoteVote($event,i)'></app-quote-details>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
