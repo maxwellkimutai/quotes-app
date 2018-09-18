@@ -1,27 +1,43 @@
-# Quotes
+# Quotes Application
+#### Users can submit a quote and it is added to the website. They can also like and dislike the quotes, September 17, 2018
+#### By **Maxwell Kimutai**
+## Description
+A user can submit a quote with details of the author and who submitted the quote. It then added to the list of quotes in the website. The user can also like or dislike the quotes on the site and delete a quote. The quote with the highest likes is highlighted.
+## BDD
+The program asks for the users to submit a quote
+* Example input: "All that glitters is not gold"
+* Example output: "All that glitters is not gold"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+The program checks to see if all the input fields have values
+* Example input: empty value
+* Example output: empty values
 
-## Development server
+The program deletes a quote when it's delete button is clicked
+* Example input: delete quote
+* Example output: quote deleted
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The program highlights the quote with the highest likes
+* Example input: 5 likes
+* Example output: background color changes to black
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Setup/Installation Requirements
+* https://github.com/maxwellkimutai/quotes-app
+* Install angular
+* Download the quote-app repository to the angular folder
+* cd quote-app
+* run ng serve command on the terminal
+## Known Bugs
+None
+## Technologies used
+* HTML
+* CSS
+* JavaScript
+* angular
+* git
+## Link To gh-pages
+https://maxwellkimutai.github.io/quotes-app/
+## Support and contact details
+Contact Maxwell Kimutai on +254713510682
+### License
+MIT
+Copyright (c) 2018 **Maxwell Kimutai**
